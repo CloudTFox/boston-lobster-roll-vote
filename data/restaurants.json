@@ -1,0 +1,12 @@
+[
+  { "id": "neptune-oyster", "name": "Neptune Oyster", "neighborhood": "North End", "style": "warm", "blurb": "The cult favorite: a hot buttered roll that draws lines down Salem Street." },
+  { "id": "row-34", "name": "Row 34", "neighborhood": "Fort Point", "style": "both", "blurb": "Seaport-adjacent oyster hall serving both warm butter and cold mayo versions." },
+  { "id": "james-hook", "name": "James Hook & Co.", "neighborhood": "Waterfront", "style": "cold", "blurb": "Old-school family lobster pound with a no-frills roll to go." },
+  { "id": "lukes-lobster", "name": "Luke's Lobster", "neighborhood": "Back Bay", "style": "cold", "blurb": "Maine-style, lightly dressed, with a swipe of mayo and lemon butter." },
+  { "id": "yankee-lobster", "name": "Yankee Lobster Co.", "neighborhood": "Seaport", "style": "cold", "blurb": "Fish market and lunch counter on the working waterfront." },
+  { "id": "paulis", "name": "Pauli's", "neighborhood": "North End", "style": "cold", "blurb": "Famous for an overstuffed roll that's more lobster than bun." },
+  { "id": "belle-isle", "name": "Belle Isle Seafood", "neighborhood": "Winthrop", "style": "cold", "blurb": "Worth the trip past the airport: a beloved neighborhood seafood shack." },
+  { "id": "saltie-girl", "name": "Saltie Girl", "neighborhood": "Back Bay", "style": "both", "blurb": "Seafood bar offering an upscale take, hot buttered or cold." },
+  { "id": "union-oyster-house", "name": "Union Oyster House", "neighborhood": "Downtown", "style": "cold", "blurb": "America's oldest restaurant keeps a classic on the menu." },
+  { "id": "b-and-g-oysters", "name": "B&G Oysters", "neighborhood": "South End", "style": "cold", "blurb": "Intimate South End oyster bar with a refined, chunky roll." }
+]
