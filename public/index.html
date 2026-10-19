@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Lobster Roll in Boston</title>
+  <meta name="description" content="Vote for the best lobster roll in Boston.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="">Lobster Roll Vote</a>
+      <nav>
+        <a href="/" aria-current="page">Vote</a>
+        <a href="/docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Who makes Boston's best lobster roll?</h1>
+      <p>One vote per person. Change your mind anytime. Cold with mayo or warm with butter, all are welcome.</p>
+    </section>
+
+    <div class="layout">
+      <section aria-labelledby="contenders">
+        <h2 id="contenders" hidden>Contenders</h2>
+        <div class="filters" role="group" aria-label="Filter by style">
+          <button class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="cold" aria-pressed="false">Cold &amp; mayo</button>
+          <button class="chip" data-filter="warm" aria-pressed="false">Warm &amp; butter</button>
+        </div>
+        <div id="grid" class="grid" aria-live="polite"></div>
+      </section>
+
+      <aside class="board" aria-labelledby="board-title">
+        <h2 id="board-title">Leaderboard</h2>
+        <p class="sub" id="total">Loading…</p>
+        <ol id="leaderboard"></ol>
+        <p class="sub" id="my-vote" style="margin-top:14px"></p>
+      </aside>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
