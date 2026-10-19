@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Docs · Lobster Roll Vote</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="">Lobster Roll Vote</a>
+      <nav>
+        <a href="/">Vote</a>
+        <a href="/docs.html" aria-current="page">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap docs">
+    <aside>
+      <a href="#how-to-vote">How to vote</a>
+      <a href="#styles">Roll styles</a>
+      <a href="#rules">Voting rules</a>
+      <a href="#api">API</a>
+      <a href="#faq">FAQ</a>
+      <a href="#developers">For developers</a>
+    </aside>
+
+    <article>
+      <h1>Documentation</h1>
+      <p>Everything you need to use Lobster Roll Vote. Developer docs live in the <code>docs/</code> folder of the Git repository.</p>
+
+      <h2 id="how-to-vote">How to vote</h2>
+      <ol>
+        <li>Browse the contenders on the <a href="/">Vote</a> page. Use the filter chips to narrow by style.</li>
+        <li>Click <strong>Vote</strong> on your favorite. The card is highlighted and the leaderboard updates instantly.</li>
+        <li>Changed your mind? Click <strong>Vote</strong> on a different spot and your vote moves there.</li>
+        <li>To remove your vote entirely, click <strong>Your pick ✓</strong> again or use <em>Withdraw vote</em> under the leaderboard.</li>
+      </ol>
+
+      <h2 id="styles">Roll styles</h2>
+      <table>
+        <tr><th>Badge</th><th>Meaning</th></tr>
+        <tr><td><span class="badge cold">Cold</span></td><td>Maine style: chilled lobster dressed with mayo, served in a toasted split-top bun.</td></tr>
+        <tr><td><span class="badge warm">Warm</span></td><td>Connecticut style: warm lobster tossed in drawn butter.</td></tr>
+        <tr><td><span class="badge both">Hot or cold</span></td><td>The spot serves both. It appears under either filter.</td></tr>
+      </table>
+
+      <h2 id="rules">Voting rules</h2>
+      <ul>
+        <li><strong>One vote per browser.</strong> Your browser receives an anonymous ID cookie the first time you vote. No account or personal data is collected.</li>
+        <li><strong>Votes are changeable.</strong> Re-voting moves your single vote; it never adds a second one.</li>
+        <li><strong>Results are live.</strong> The leaderboard refreshes every 15 seconds while the page is open. Percentages are each spot's share of all votes.</li>
+        <li>Clearing cookies or switching browsers gives you a fresh ID. This is a fun poll, not an election.</li>
+      </ul>
+
+      <h2 id="api">API</h2>
+      <p>The app is powered by a small JSON API you can call directly.</p>
+      <table>
+        <tr><th>Method</th><th>Path</th><th>Description</th></tr>
+        <tr><td><code>GET</code></td><td><code>/api/restaurants</code></td><td>Standings, total votes and your current vote</td></tr>
+        <tr><td><code>POST</code></td><td><code>/api/votes</code></td><td>Cast or move your vote. Body: <code>{"restaurantId": "neptune-oyster"}</code></td></tr>
+        <tr><td><code>DELETE</code></td><td><code>/api/votes</code></td><td>Withdraw your vote</td></tr>
+        <tr><td><code>GET</code></td><td><code>/api/health</code></td><td>Health check</td></tr>
+      </table>
+      <pre><code>curl -c jar -b jar -X POST localhost:3000/api/votes \
+  -H 'Content-Type: application/json' \
+  -d '{"restaurantId":"row-34"}'</code></pre>
+      <p>Full request/response details: <code>docs/api.md</code>.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <p><strong>My favorite spot isn't listed.</strong> Open an issue or pull request adding it to <code>data/restaurants.json</code>. See <code>docs/restaurants.md</code>.</p>
+      <p><strong>Where are votes stored?</strong> In <code>data/votes.json</code> on the server. That file is git-ignored so real votes never end up in the repository.</p>
+      <p><strong>Can I reset the results?</strong> Stop the server and delete <code>data/votes.json</code>.</p>
+
+      <h2 id="developers">For developers</h2>
+      <pre><code>git clone &lt;repo-url&gt;
+cd boston-lobster-roll-vote
+npm start      # http://localhost:3000
+npm test</code></pre>
+      <p>Start with <code>docs/README.md</code> for architecture, Git workflow, and deployment guides.</p>
+    </article>
+  </main>
+</body>
+</html>
