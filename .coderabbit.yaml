@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: en-US
+reviews:
+  profile: chill
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "src/**/*.js"
+      instructions: >-
+        Zero-dependency Node server. Flag any new npm dependency, unvalidated input,
+        or changes that could allow more than one vote per voter.
+    - path: "public/**/*.js"
+      instructions: Ensure any data rendered into HTML goes through escapeHtml.
+    - path: "data/restaurants.json"
+      instructions: >-
+        Check ids are lowercase-hyphenated and unique, style is cold|warm|both,
+        and existing ids are not renamed.
