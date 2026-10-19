@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Runtime data (votes are local state, never committed)
+data/votes.json
+data/*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Coverage
+coverage/

@@ -1,0 +1,15 @@
+{
+  "name": "boston-lobster-roll-vote",
+  "version": "1.0.0",
+  "description": "Vote for the best lobster roll in Boston.",
+  "main": "src/server.js",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js",
+    "lint": "node --check src/server.js && node --check src/store.js && node --check public/app.js"
+  }
+}
