@@ -5,7 +5,7 @@ reviews:
   high_level_summary: true
   auto_review:
     enabled: true
-    drafts: true
+    drafts: false
   path_instructions:
     - path: "src/**/*.js"
       instructions: >-
