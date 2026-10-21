@@ -8,5 +8,5 @@
   { "id": "belle-isle", "name": "Belle Isle Seafood", "neighborhood": "Winthrop", "style": "cold", "blurb": "Worth the trip past the airport: a beloved neighborhood seafood shack." },
   { "id": "saltie-girl", "name": "Saltie Girl", "neighborhood": "Back Bay", "style": "both", "blurb": "Seafood bar offering an upscale take, hot buttered or cold." },
   { "id": "union-oyster-house", "name": "Union Oyster House", "neighborhood": "Downtown", "style": "cold", "blurb": "America's oldest restaurant keeps a classic on the menu." },
-  { "id": "b-and-g-oysters", "name": "B&G Oysters", "neighborhood": "South End", "style": "cold", "blurb": "Intimate South End oyster bar with a refined, chunky roll." }
+  { "id": "eventide-fenway", "name": "Eventide Fenway", "neighborhood": "Fenway", "style": "cold", "blurb": "In a town that loves its traditions, Eventide’s lobster roll suggests that the original way is not the only right way." }
 ]
